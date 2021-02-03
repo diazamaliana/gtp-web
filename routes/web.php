@@ -33,9 +33,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function(){
     
-    Route::get('/dasbor', function () {
-        return view('admin.dasbor');
-    });
+     Route::get('/dasbor-galeri', function () {
+         return view('admin.galeri');
+     });
+
+    Route::get('/dasbor',['uses' => 'HomeController@dashboard', 'as' =>'dashboard']);
 
     Route::get('/dasbor-blog',['uses' => 'PostController@index','as' => 'posts.index']);
 
@@ -68,9 +70,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/profil', 'UserController@index')->name('admin.profile');
     Route::put('/profil/update/{id}', 'UserController@update')->name('profile.update');
 
-    //Update Password
-    Route::get('/password-update', 'ProfileController@password')->name('users.password');
-    Route::post('/password-update', 'ProfileController@updatePassword')->name('password.update');
+   
 
 
 });

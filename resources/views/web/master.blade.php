@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="assets/images/1-122x118.png" type="image/x-icon">
   <meta name="description" content="">
   
-  <title>Home</title>
+  <title>Gama Technopark Palon Web</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">

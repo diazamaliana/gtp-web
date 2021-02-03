@@ -61,4 +61,23 @@ class HomeController extends Controller
         return view('web.blog' , compact('user'), ['posts' => $results] );
     }
 
+    public function dashboard()
+    {
+         $users = User::count();
+         $posts = Post::count();
+         $packages = Package::count();
+         $places = Place::count();
+       
+        $widget = [
+             'users' => $users,
+             'posts' => $posts,
+             'packages' => $packages,
+             'places' => $places
+        
+        ];
+        return view('admin.dasbor', compact('widget'));
+    }
+
+    
+
 }
